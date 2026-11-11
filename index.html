@@ -554,7 +554,7 @@ dialog .ok{border:0;background:var(--lime);color:var(--tinta)}
   <!-- 7. PROPUESTA ECONÓMICA -->
   <section class="panel salto" id="economica">
     <p class="eyebrow">8 · Propuesta económica</p>
-    <h2>Un valor por el primer entregable, y un soporte de cargue para que la información siga al día</h2>
+    <h2>Un valor por el primer entregable</h2>
     <div class="economica">
       <div class="incluye">
         <div><span class="n">1</span><p><b>Extracción desde Cora</b><span>Informes desde 2020 en PDF, Word, Excel y campos del sistema.</span></p></div>
@@ -572,24 +572,6 @@ dialog .ok{border:0;background:var(--lime);color:var(--tinta)}
         <hr>
         <div class="sup"><span>Repositorio Supabase de Sura</span><b>US$25 / mes</b></div>
         <p class="nota" style="margin-top:6px">Lo paga Sura directamente, aparte del valor de la propuesta.</p>
-      </div>
-    </div>
-    <div class="cargue">
-      <div class="cg-izq">
-        <p class="eyebrow">Soporte de cargue</p>
-        <h3>La información de Sura, siempre al día</h3>
-        <p>Después del primer entregable, Conhintec sigue cargando las nuevas órdenes de servicio con la misma auditoría: Centinela y un profesional. Sura escoge cada cuánto.</p>
-        <div class="per" id="per" role="group" aria-label="Periodicidad del cargue">
-          <button type="button" data-p="mes" aria-pressed="false">Mensual</button>
-          <button type="button" data-p="tri" aria-pressed="true">Trimestral</button>
-          <button type="button" data-p="sem" aria-pressed="false">Semestral</button>
-          <button type="button" data-p="mil" aria-pressed="false">Cada 1.000 órdenes</button>
-        </div>
-        <label class="ord no-print">Órdenes de servicio por cargue <span class="fila"><input type="range" id="rOrd" min="50" max="3000" step="10"><output id="oOrd" class="tab"></output></span></label>
-      </div>
-      <div class="cg-der">
-        <div class="tarifa"><small>Tarifa</small><b>$15.000</b><span>por cada orden de servicio cargada</span></div>
-        <div class="calc"><small id="cgTit">Valor estimado de cada cargue</small><b class="tab" id="cgVal"></b><span id="cgTxt"></span></div>
       </div>
     </div>
     <div class="condiciones">
@@ -763,24 +745,6 @@ function descargar(nombre){
   const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([final], {type: 'text/html'})); a.download = nombre; document.body.appendChild(a); a.click(); a.remove();
 }
 function mostrarFijo(v){ $('vTxt').textContent = pesos(v); }
-// ---------- Soporte de cargue: $15.000 por orden, según la periodicidad ----------
-const TARIFA = 15000, POR_MES = 17000 / 72 * 1.0;   // órdenes nuevas al mes, estimado con la historia desde 2020
-const PER = {mes: {m: 1, t: 'Cada mes'}, tri: {m: 3, t: 'Cada trimestre'}, sem: {m: 6, t: 'Cada semestre'}, mil: {fijo: 1000, t: 'Cada 1.000 órdenes'}};
-let per = 'tri';
-function pintarCargue(desdeBarra){
-  const p = PER[per];
-  if (!desdeBarra){ $('rOrd').value = p.fijo || Math.round(POR_MES * p.m / 10) * 10; }
-  $('rOrd').disabled = !!p.fijo;
-  const n = +$('rOrd').value; $('oOrd').textContent = fmt(n);
-  $('cgVal').textContent = pesos(n * TARIFA);
-  $('cgTit').textContent = p.fijo ? 'Valor de cada cargue' : 'Valor estimado de cada cargue';
-  $('cgTxt').textContent = `${p.t}: ${fmt(n)} órdenes × ${pesos(TARIFA)}. Se paga al momento de cargar.`;
-}
-$('per').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; per = b.dataset.p;
-  $('per').querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', String(x === b))); pintarCargue(); });
-$('rOrd').addEventListener('input', () => pintarCargue(true));
-pintarCargue();
-
 // ---------- Firma de Sura ----------
 function activarFirma(){ $('bFirmar').disabled = false; $('notaFirma').textContent = 'Al firmar se descarga la propuesta aprobada para enviarla a Conhintec.'; }
 function mostrarFirma(f){ $('sinFirma').hidden = true; $('conFirma').hidden = false; $('fImg').src = f.img; $('fTxt').textContent = `${f.nombre} · ${f.cargo} · ${f.fecha}`; }
