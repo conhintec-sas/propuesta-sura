@@ -195,6 +195,8 @@ svg{display:block}
 .caja-valor .nota{font-size:.82rem;font-weight:600;color:#C9DFE8}
 .caja-valor .fijo b{display:block;margin-top:10px;font:800 clamp(2rem,5vw,2.8rem)/1.05 var(--fd);color:#fff}
 .caja-valor .fijo span{display:block;margin-top:4px;font-size:.86rem;font-weight:700;color:#C9DFE8}
+.caja-valor .ref-hso{margin-top:12px;font:700 clamp(1.15rem,2.6vw,1.45rem)/1.35 var(--fd);color:#fff}
+.caja-valor .ref-hso strong{color:var(--limel);white-space:nowrap}
 .caja-valor .incl-ent{display:block;margin-top:14px;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.08);font-size:.88rem;font-weight:600;color:#D3E4EC;line-height:1.45}
 .caja-valor .incl-ent strong{color:var(--limel)}
 .caja-valor .fijo .sello{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:6px 12px;border-radius:999px;background:rgba(91,224,143,.16);border:1px solid rgba(91,224,143,.45);color:#9BF0BE;font:800 .76rem var(--fd)}
@@ -330,7 +332,7 @@ dialog .ok{border:0;background:var(--lime);color:var(--tinta)}
 </head>
 <body>
 <!-- Estado de la propuesta: el valor se fija desde el botón "Establecer valor". -->
-<script id="estado" type="application/json">{"valor":184000000}</script>
+<script id="estado" type="application/json">{}</script>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
@@ -568,7 +570,7 @@ dialog .ok{border:0;background:var(--lime);color:var(--tinta)}
       </div>
       <div class="caja-valor">
         <small>Valor de la propuesta</small>
-        <div class="fijo" id="fijo"><b class="tab" id="vTxt">$184.000.000</b><span>Pesos colombianos, antes de IVA</span><span class="incl-ent">Primer entregable: cerca de <strong>3.000 empresas</strong> y <strong>17.000 informes</strong>, su vitrina exclusiva y su tablero completo.</span></div>
+        <div class="fijo" id="fijo"><p class="ref-hso">Revisar propuesta: <strong>HSO-5095.1</strong> para conocer el valor de la propuesta comercial</p><span class="incl-ent">Primer entregable: cerca de <strong>3.000 empresas</strong> y <strong>17.000 informes</strong>, su vitrina exclusiva y su tablero completo.</span></div>
         <hr>
         <div class="sup"><span>Repositorio Supabase de Sura</span><b>US$25 / mes</b></div>
         <p class="nota" style="margin-top:6px">Lo paga Sura directamente, aparte del valor de la propuesta.</p>
@@ -744,7 +746,6 @@ function descargar(nombre){
   const final = FUENTE.replace(/(<script id="estado" type="application\/json">)[\s\S]*?(<\/script>)/, (m, a, b) => a + json + b);
   const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([final], {type: 'text/html'})); a.download = nombre; document.body.appendChild(a); a.click(); a.remove();
 }
-function mostrarFijo(v){ $('vTxt').textContent = pesos(v); }
 // ---------- Firma de Sura ----------
 function activarFirma(){ $('bFirmar').disabled = false; $('notaFirma').textContent = 'Al firmar se descarga la propuesta aprobada para enviarla a Conhintec.'; }
 function mostrarFirma(f){ $('sinFirma').hidden = true; $('conFirma').hidden = false; $('fImg').src = f.img; $('fTxt').textContent = `${f.nombre} · ${f.cargo} · ${f.fecha}`; }
@@ -764,7 +765,7 @@ $('fForm').addEventListener('submit', e => {
   mostrarFirma(estado.firma);
   descargar('Propuesta Conhintec para ARL SURA - aprobada.html');
 });
-if (estado.valor){ mostrarFijo(estado.valor); activarFirma(); }
+activarFirma();
 if (estado.firma) mostrarFirma(estado.firma);
 </script>
 </body>
