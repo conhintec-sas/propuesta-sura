@@ -195,14 +195,67 @@ svg{display:block}
 .caja-valor .nota{font-size:.82rem;font-weight:600;color:#C9DFE8}
 .caja-valor .fijo b{display:block;margin-top:10px;font:800 clamp(2rem,5vw,2.8rem)/1.05 var(--fd);color:#fff}
 .caja-valor .fijo span{display:block;margin-top:4px;font-size:.86rem;font-weight:700;color:#C9DFE8}
+.caja-valor .incl-ent{display:block;margin-top:14px;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.08);font-size:.88rem;font-weight:600;color:#D3E4EC;line-height:1.45}
+.caja-valor .incl-ent strong{color:var(--limel)}
 .caja-valor .fijo .sello{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:6px 12px;border-radius:999px;background:rgba(91,224,143,.16);border:1px solid rgba(91,224,143,.45);color:#9BF0BE;font:800 .76rem var(--fd)}
 .caja-valor .sello svg{width:16px;height:16px}
 .caja-valor hr{border:0;border-top:1px solid rgba(255,255,255,.16);margin:20px 0}
 .caja-valor .sup{display:flex;justify-content:space-between;gap:10px;font-weight:700;font-size:.9rem;color:#D3E4EC}
 .caja-valor .sup b{color:var(--limel);font-family:var(--fd)}
+.cargue{margin-top:22px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:22px;align-items:center;padding:clamp(20px,3vw,32px);border-radius:28px;background:linear-gradient(135deg,#F2FAFC,#FBFDF0);border:1.5px solid #CBE7EF}
+.cargue h3{font-size:clamp(1.3rem,3vw,1.7rem);margin-top:6px}
+.cargue .cg-izq>p:not(.eyebrow){margin-top:8px;color:var(--mut);font-weight:600}
+.per{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.per button{min-height:44px;padding:8px 16px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-weight:800;color:var(--mut)}
+.per button[aria-pressed="true"]{background:linear-gradient(135deg,var(--navy),var(--teal));border-color:transparent;color:#fff;box-shadow:var(--sh2)}
+.ord{display:grid;gap:4px;margin-top:16px;font-weight:800;font-size:.9rem;color:var(--navy)}
+.ord .fila{display:flex;align-items:center;gap:12px}
+.ord input{flex:1;min-width:0;accent-color:var(--teal)}
+.ord output{font:800 1.3rem var(--fd);color:var(--tinta);min-width:4ch;text-align:right}
+.cg-der{display:grid;gap:12px}
+.tarifa,.calc{padding:18px 20px;border-radius:22px}
+.tarifa{background:#fff;border:1px solid var(--line)}
+.calc{background:linear-gradient(160deg,var(--navy),var(--tinta));color:#fff}
+.tarifa small,.calc small{display:block;font:800 .7rem var(--fd);letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+.calc small{color:var(--limel)}
+.tarifa b{display:block;font:800 2rem/1.1 var(--fd);color:var(--tinta)}
+.calc b{display:block;font:800 clamp(1.8rem,4vw,2.4rem)/1.1 var(--fd);color:#fff;margin-top:4px}
+.tarifa span,.calc span{display:block;margin-top:4px;font-size:.86rem;font-weight:700;color:var(--mut)}
+.calc span{color:#C9DFE8}
 .condiciones{margin-top:20px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
 .condiciones div{padding:14px 16px;border-radius:18px;background:var(--soft);font-size:.86rem;font-weight:600;color:var(--mut)}
 .condiciones b{display:block;font:800 .9rem var(--fd);color:var(--tinta)}
+.dash{margin-top:24px;border-radius:28px;background:linear-gradient(160deg,#0B2A40,#061B2B);padding:20px;color:#fff;box-shadow:0 30px 60px -30px rgba(6,42,66,.8)}
+.dash-top{display:flex;align-items:center;gap:14px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.1)}
+.dash-top img{height:26px;background:#fff;border-radius:8px;padding:5px 8px}
+.dash-top span{font:800 1rem var(--fd)}
+.dash-top i{margin-left:auto;width:10px;height:10px;border-radius:50%;background:#5BE08F;box-shadow:0 0 10px #5BE08F}
+.dash-filtros{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.dash-filtros button{min-height:38px;padding:6px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:transparent;color:#C9DFE8;font-weight:700;font-size:.84rem}
+.dash-filtros button[aria-pressed="true"]{background:var(--cielo);border-color:transparent;color:var(--tinta)}
+.dash-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:14px}
+.dash-kpis div{padding:14px;border-radius:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)}
+.dash-kpis b{display:block;font:800 1.6rem/1.1 var(--fd)}
+.dash-kpis span{font-size:.8rem;font-weight:700;color:#9FB8C6}
+.dash-kpis .alerta{background:rgba(210,71,59,.16);border-color:rgba(210,71,59,.45)}
+.dash-kpis .alerta b{color:#FF9A8F}
+.dash-kpis .alerta button{margin-top:6px;min-height:30px;padding:2px 10px;border:0;border-radius:8px;background:#D2473B;color:#fff;font-weight:800;font-size:.74rem}
+.dash-cuerpo{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr) minmax(0,1fr);gap:10px;margin-top:10px}
+.dc{padding:14px;border-radius:16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1)}
+.dc h4{color:#fff;font-size:.86rem}
+.barras{display:flex;align-items:flex-end;gap:6px;height:150px;margin-top:10px}
+.barras div{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;height:100%;justify-content:flex-end}
+.barras i{display:block;width:100%;border-radius:6px 6px 2px 2px;background:linear-gradient(180deg,var(--cielo),var(--teal2));transition:height .8s cubic-bezier(.2,.8,.2,1)}
+.barras span{font-size:.66rem;font-weight:700;color:#9FB8C6}
+.dona{width:120px;margin:10px auto 0}
+.dona circle{fill:none;stroke-width:16;transition:stroke-dasharray .8s,stroke-dashoffset .8s}
+.dleg{display:flex;justify-content:center;gap:10px;margin-top:8px;font-size:.72rem;font-weight:700;color:#9FB8C6}
+.dleg i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:4px}
+.fact{display:grid;gap:9px;margin-top:10px}
+.fact div{display:grid;grid-template-columns:78px minmax(0,1fr) 34px;gap:8px;align-items:center;font-size:.76rem;font-weight:700;color:#C9DFE8}
+.fact u{height:9px;border-radius:9px;background:rgba(255,255,255,.08);overflow:hidden;text-decoration:none}
+.fact u i{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,var(--limel),var(--lime));transition:width .8s cubic-bezier(.2,.8,.2,1)}
+.fact b{text-align:right;color:#fff}
 .firmas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;margin-top:44px}
 .firmas .espacio{height:120px;display:flex;align-items:flex-end;justify-content:flex-start;padding-bottom:6px;position:relative}
 .firmas .firma-con{height:110px;width:auto;mix-blend-mode:multiply}
@@ -235,8 +288,9 @@ dialog .ok{border:0;background:var(--lime);color:var(--tinta)}
 @media (max-width:980px){
   .tuberia{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:40px}
   .recibe,.garantias{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dash-cuerpo{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.dash-cuerpo .dc:first-child{grid-column:1/-1}
   .hoy{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .capa,.economica,.detalle{grid-template-columns:minmax(0,1fr)}
+  .capa,.economica,.detalle,.cargue{grid-template-columns:minmax(0,1fr)}
   .caja-valor{position:static}
 }
 @media (max-width:640px){
@@ -253,6 +307,7 @@ dialog .ok{border:0;background:var(--lime);color:var(--tinta)}
   .tubo i{left:0;top:-30%;width:100%;height:30%;animation-name:baja}
   @keyframes baja{to{top:100%}}
   .costo{grid-template-columns:minmax(0,1fr)}
+  .dash-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.dash-cuerpo{grid-template-columns:minmax(0,1fr)}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01s!important;transition-duration:.01s!important}}
 
@@ -275,7 +330,7 @@ dialog .ok{border:0;background:var(--lime);color:var(--tinta)}
 </head>
 <body>
 <!-- Estado de la propuesta: el valor se fija desde el botón "Establecer valor". -->
-<script id="estado" type="application/json">{"valor":null}</script>
+<script id="estado" type="application/json">{"valor":184000000}</script>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
@@ -323,7 +378,7 @@ dialog .ok{border:0;background:var(--lime);color:var(--tinta)}
     <p class="lead">Cora es el sistema operativo con el que Conhintec trabaja desde sus inicios. Ahí está establecida la información de higiene ocupacional de las empresas, en informes PDF, Word, Excel y en campos del sistema. Esa información la revisamos y la cargamos para Sura.</p>
     <div class="hoy">
       <div style="--c:#2A8FA3"><b class="tab">Cerca de 3.000</b><span>empresas afiliadas a Sura</span></div>
-      <div style="--c:#9CAA2E"><b class="tab">Más de 10.000</b><span>informes de higiene</span></div>
+      <div style="--c:#9CAA2E"><b class="tab">Cerca de 17.000</b><span>informes de higiene</span></div>
       <div style="--c:#6B4FC4"><b class="tab">Cientos de miles</b><span>de mediciones</span></div>
       <div style="--c:#C9711F"><b class="tab">2020 → hoy</b><span>informes en Cora</span></div>
     </div>
@@ -409,15 +464,36 @@ dialog .ok{border:0;background:var(--lime);color:var(--tinta)}
     <div class="modelo">
       <div class="tb"><h4>sura.empresas</h4><p><b>nit</b> · nombre</p><p>ciiu · sector económico</p><div class="n tab">≈ 3.000 <small>filas estimadas</small></div></div>
       <div class="lazo"><span>1 → muchos</span></div>
-      <div class="tb"><h4>sura.informes</h4><p><b>id_informe</b> · nit</p><p>año · mes · factor · planta</p><div class="n tab">+10.000 <small>filas estimadas</small></div></div>
+      <div class="tb"><h4>sura.informes</h4><p><b>id_informe</b> · nit</p><p>año · mes · factor · planta</p><div class="n tab">≈ 17.000 <small>filas estimadas</small></div></div>
       <div class="lazo"><span>1 → muchos</span></div>
-      <div class="tb"><h4>sura.mediciones</h4><p><b>id_muestra</b> · id_informe</p><p>área · tlv · lod · valor · grado</p><div class="n tab">+350.000 <small>filas estimadas</small></div></div>
+      <div class="tb"><h4>sura.mediciones</h4><p><b>id_muestra</b> · id_informe</p><p>área · tlv · lod · valor · grado</p><div class="n tab">≈ 600.000 <small>filas estimadas</small></div></div>
+    </div>
+  </section>
+
+  <!-- 4. SU TABLERO -->
+  <section class="panel salto">
+    <p class="eyebrow">4 · Su tablero de gobernanza</p>
+    <h2>Un tablero completo, hecho para Sura <span class="aprox">Datos de ejemplo</span></h2>
+    <p class="lead">Además de llevarse los datos por SQL, Sura tendrá su propio tablero para mirar toda la historia, cruzar empresas y sectores, y encontrar los riesgos.</p>
+    <div class="dash" id="dash">
+      <div class="dash-top"><img src="data:image/png;base64,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" alt="SURA"><span>Gobernanza de higiene ocupacional</span><i></i></div>
+      <div class="dash-filtros" id="dFil">
+        <button type="button" aria-pressed="true">Todas las empresas</button><button type="button" aria-pressed="false">Manufactura</button><button type="button" aria-pressed="false">Construcción</button><button type="button" aria-pressed="false">Minería</button><button type="button" aria-pressed="false">Salud</button>
+      </div>
+      <div class="dash-kpis">
+        <div><b class="tab" id="dk1">0</b><span>empresas</span></div><div><b class="tab" id="dk2">0</b><span>informes</span></div><div><b class="tab" id="dk3">0</b><span>mediciones</span></div><div class="alerta"><b class="tab" id="dk4">0</b><span>en riesgo alto</span><button type="button">Ver cuáles</button></div>
+      </div>
+      <div class="dash-cuerpo">
+        <div class="dc"><h4>Mediciones por año</h4><div class="barras" id="dBar"></div></div>
+        <div class="dc"><h4>Grado de riesgo</h4><svg viewBox="0 0 120 120" class="dona" id="dDona"></svg><div class="dleg"><span><i style="background:#D2473B"></i>Alto</span><span><i style="background:#E39B1B"></i>Medio</span><span><i style="background:#2E9E5B"></i>Bajo</span></div></div>
+        <div class="dc"><h4>Factores de riesgo</h4><div class="fact" id="dFac"></div></div>
+      </div>
     </div>
   </section>
 
   <!-- 4. CÓMO EXTRAE SURA -->
   <section class="panel oscura salto">
-    <p class="eyebrow">4 · Cómo se lleva Sura la información</p>
+    <p class="eyebrow">5 · Cómo se lleva Sura la información</p>
     <h2>Su equipo consulta con SQL y la trae a su lakehouse</h2>
     <p class="lead">La primera vez se lleva toda la historia. Después, cada día, solo lo nuevo.</p>
     <div class="consulta">
@@ -434,14 +510,14 @@ dialog .ok{border:0;background:var(--lime);color:var(--tinta)}
 
   <!-- 5. SUPABASE DE SURA -->
   <section class="panel salto">
-    <p class="eyebrow">5 · El repositorio de Sura en Supabase</p>
+    <p class="eyebrow">6 · El repositorio de Sura en Supabase</p>
     <h2>Capacidad de sobra para toda su historia <span class="aprox">Valores estimados</span></h2>
     <p class="lead">La vitrina de Sura vive en Supabase, plan Pro. Trae tres cupos incluidos. Mueva la barra y mire que con 3.000 empresas, y hasta el doble, todo queda cubierto.</p>
     <div class="capa">
       <div>
         <div class="ctl"><label>Empresas
           <span class="fila"><input type="range" id="rEmp" min="500" max="6000" step="100" value="3000" aria-label="Número de empresas"><output id="oEmp" class="tab">3.000</output></span></label>
-          <p class="ayuda">Estimado: unos 3 a 4 informes por empresa y 35 mediciones por informe.</p></div>
+          <p class="ayuda">Estimado: unos 5 a 6 informes por empresa y 35 mediciones por informe.</p></div>
         <div class="mini">
           <div><b class="tab" id="mInf"></b><span>informes</span></div>
           <div><b class="tab" id="mMed"></b><span>mediciones</span></div>
@@ -461,7 +537,7 @@ dialog .ok{border:0;background:var(--lime);color:var(--tinta)}
 
   <!-- 6. SEGURIDAD -->
   <section class="panel">
-    <p class="eyebrow">6 · Seguridad</p>
+    <p class="eyebrow">7 · Seguridad</p>
     <h2>La información de Sura, cuidada</h2>
     <div class="garantias">
       <div><span class="ok"><svg><use href="#i-check"/></svg></span><b>Solo Sura</b><span>Su base no contiene datos de otros clientes de Conhintec.</span></div>
@@ -477,8 +553,8 @@ dialog .ok{border:0;background:var(--lime);color:var(--tinta)}
 
   <!-- 7. PROPUESTA ECONÓMICA -->
   <section class="panel salto" id="economica">
-    <p class="eyebrow">7 · Propuesta económica</p>
-    <h2>Un solo valor por todo el proyecto</h2>
+    <p class="eyebrow">8 · Propuesta económica</p>
+    <h2>Un valor por el primer entregable, y un soporte de cargue para que la información siga al día</h2>
     <div class="economica">
       <div class="incluye">
         <div><span class="n">1</span><p><b>Extracción desde Cora</b><span>Informes desde 2020 en PDF, Word, Excel y campos del sistema.</span></p></div>
@@ -487,19 +563,33 @@ dialog .ok{border:0;background:var(--lime);color:var(--tinta)}
         <div><span class="n">4</span><p><b>Organización y carga en la gobernanza de datos</b><span>Empresa → año → mes → factor → planta → medición.</span></p></div>
         <div><span class="n">5</span><p><b>Construcción de la vitrina de Sura</b><span>Base exclusiva en Supabase, estructura de tablas y diccionario de datos.</span></p></div>
         <div><span class="n">6</span><p><b>Perfil de acceso y conexión SQL</b><span>Usuario de vista y acompañamiento para conectar su lakehouse.</span></p></div>
-        <div><span class="n">7</span><p><b>Acompañamiento y soporte</b><span>Atención a lo que Sura necesite de la información.</span></p></div>
+        <div><span class="n">7</span><p><b>Tablero completo de Sura</b><span>Indicadores, filtros libres por empresa, sector, año y factor, y alertas de riesgo.</span></p></div>
+        <div><span class="n">8</span><p><b>Acompañamiento</b><span>Atención a lo que Sura necesite de la información.</span></p></div>
       </div>
       <div class="caja-valor">
         <small>Valor de la propuesta</small>
-        <div class="editar" id="editar">
-          <div class="campo"><span>$</span><input id="vIn" inputmode="numeric" placeholder="0" aria-label="Valor de la propuesta en pesos"></div>
-          <button type="button" class="fijar" id="vFijar" disabled>Establecer valor</button>
-          <p class="nota">Escriba el valor y toque "Establecer valor". Queda fijo y se descarga la versión final para enviar a Sura.</p>
-        </div>
-        <div class="fijo" id="fijo" hidden><b class="tab" id="vTxt"></b><span>Pesos colombianos, antes de IVA</span><span class="sello"><svg><use href="#i-check"/></svg>Valor establecido</span></div>
+        <div class="fijo" id="fijo"><b class="tab" id="vTxt">$184.000.000</b><span>Pesos colombianos, antes de IVA</span><span class="incl-ent">Primer entregable: cerca de <strong>3.000 empresas</strong> y <strong>17.000 informes</strong>, su vitrina exclusiva y su tablero completo.</span></div>
         <hr>
         <div class="sup"><span>Repositorio Supabase de Sura</span><b>US$25 / mes</b></div>
         <p class="nota" style="margin-top:6px">Lo paga Sura directamente, aparte del valor de la propuesta.</p>
+      </div>
+    </div>
+    <div class="cargue">
+      <div class="cg-izq">
+        <p class="eyebrow">Soporte de cargue</p>
+        <h3>La información de Sura, siempre al día</h3>
+        <p>Después del primer entregable, Conhintec sigue cargando las nuevas órdenes de servicio con la misma auditoría: Centinela y un profesional. Sura escoge cada cuánto.</p>
+        <div class="per" id="per" role="group" aria-label="Periodicidad del cargue">
+          <button type="button" data-p="mes" aria-pressed="false">Mensual</button>
+          <button type="button" data-p="tri" aria-pressed="true">Trimestral</button>
+          <button type="button" data-p="sem" aria-pressed="false">Semestral</button>
+          <button type="button" data-p="mil" aria-pressed="false">Cada 1.000 órdenes</button>
+        </div>
+        <label class="ord no-print">Órdenes de servicio por cargue <span class="fila"><input type="range" id="rOrd" min="50" max="3000" step="10"><output id="oOrd" class="tab"></output></span></label>
+      </div>
+      <div class="cg-der">
+        <div class="tarifa"><small>Tarifa</small><b>$15.000</b><span>por cada orden de servicio cargada</span></div>
+        <div class="calc"><small id="cgTit">Valor estimado de cada cargue</small><b class="tab" id="cgVal"></b><span id="cgTxt"></span></div>
       </div>
     </div>
     <div class="condiciones">
@@ -510,7 +600,7 @@ dialog .ok{border:0;background:var(--lime);color:var(--tinta)}
     <div class="firmas">
       <div class="f"><div class="espacio"><img class="firma-con" src="data:image/jpeg;base64,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" alt="Conhintec"></div><div class="linea">Por Conhintec<span>Propuesta emitida</span></div></div>
       <div class="f"><div class="espacio" id="espSura">
-          <div id="sinFirma"><button type="button" class="firmar no-print" id="bFirmar" disabled>Firmar y aprobar</button><p class="nota-f no-print" id="notaFirma">Disponible cuando Conhintec establezca el valor.</p></div>
+          <div id="sinFirma"><button type="button" class="firmar no-print" id="bFirmar" disabled>Firmar y aprobar</button><p class="nota-f no-print" id="notaFirma"></p></div>
           <div id="conFirma" hidden><img id="fImg" alt="Firma de ARL SURA"><span class="aprobado">APROBADO</span></div></div>
         <div class="linea">Por ARL SURA<span id="fTxt">Nombre, cargo y firma</span></div></div>
     </div>
@@ -546,7 +636,7 @@ document.querySelectorAll('[data-sube]').forEach(el => visto.observe(el));
 
 // ---------- 2. Proceso: cables que fluyen entre estaciones ----------
 const PASOS = [
-  {h: 'Cora: la información ya está organizada', p: 'Cora es el sistema operativo de Conhintec desde sus inicios. Ahí están los informes de higiene de cada empresa, listos para revisar y cargar.', li: ['Informes en PDF, Word y Excel', 'Datos en campos del sistema', 'Cerca de 3.000 empresas, más de 10.000 informes']},
+  {h: 'Cora: la información ya está organizada', p: 'Cora es el sistema operativo de Conhintec desde sus inicios. Ahí están los informes de higiene de cada empresa, listos para revisar y cargar.', li: ['Informes en PDF, Word y Excel', 'Datos en campos del sistema', 'Cerca de 3.000 empresas y 17.000 informes']},
   {h: 'Centinela audita automáticamente', p: 'Nuestro sistema de auditoría lee cada informe, saca las mediciones a una tabla y marca lo que viene incompleto o fuera de lo normal.', li: ['Revisa fechas, NIT y CIIU', 'Revisa unidades, TLV y valores', 'Marca dudas con botón para corregir']},
   {h: 'Un profesional verifica y aprueba', p: 'Un profesional de higiene de Conhintec revisa lo que Centinela marcó, corrige y aprueba. Nada se carga sin su visto bueno.', li: ['Corrige las dudas', 'Confirma con el informe original', 'Firma la aprobación']},
   {h: 'Entra a la gobernanza de datos de Conhintec', p: 'La información aprobada se guarda organizada en la base interna de Conhintec, la fuente única de verdad.', li: ['Empresa → año → mes → factor', 'Planta → medición', 'Historial de cada cambio']},
@@ -593,6 +683,27 @@ addEventListener('load', dibujarCables);
 if (document.fonts) document.fonts.ready.then(dibujarCables);
 dibujarCables(); mostrar(0);
 
+// ---------- 4. Tablero de ejemplo de Sura ----------
+const SECT = [{emp: 3000, f: 1}, {emp: 820, f: .27}, {emp: 610, f: .2}, {emp: 240, f: .09}, {emp: 380, f: .12}];
+const ANOS_D = ['2020','2021','2022','2023','2024','2025','2026'], PESO_D = [.10,.12,.14,.16,.17,.18,.13];
+const RIES = [[.18,.37,.45],[.22,.40,.38],[.26,.39,.35],[.31,.38,.31],[.12,.33,.55]];
+const FACT = [['Ruido',.34],['Químicos',.24],['Iluminación',.18],['Calor',.13],['Vibración',.11]];
+const subir = (el, fin) => { const ini = +el.dataset.v || 0, t0 = performance.now(); el.dataset.v = fin; (function p(t){ const q = Math.min(1, (t - t0) / 800); el.textContent = fmt(ini + (fin - ini) * (1 - Math.pow(1 - q, 3))); if (q < 1) requestAnimationFrame(p); })(t0); };
+function pintarDash(k){
+  const s = SECT[k], inf = 17000 * s.f, med = inf * 35.15, r = RIES[k];
+  subir($('dk1'), s.emp); subir($('dk2'), inf); subir($('dk3'), med); subir($('dk4'), med * r[0]);
+  const mx = Math.max(...PESO_D);
+  $('dBar').innerHTML = ANOS_D.map((a, i) => `<div><i style="height:0" data-h="${(PESO_D[i] / mx * 88 * (.8 + .2 * ((i + k) % 3) / 2)).toFixed(0)}%"></i><span>${a}</span></div>`).join('');
+  requestAnimationFrame(() => requestAnimationFrame(() => $('dBar').querySelectorAll('i').forEach(i => i.style.height = i.dataset.h)));
+  const C = 2 * Math.PI * 44; let off = 0;
+  $('dDona').innerHTML = r.map((v, i) => { const c = `<circle cx="60" cy="60" r="44" stroke="${['#D2473B','#E39B1B','#2E9E5B'][i]}" stroke-dasharray="${(v * C).toFixed(1)} ${C.toFixed(1)}" stroke-dashoffset="${(-off * C).toFixed(1)}" transform="rotate(-90 60 60)"/>`; off += v; return c; }).join('') + `<text x="60" y="66" text-anchor="middle" font-family="Sora,sans-serif" font-weight="800" font-size="18" fill="#fff">${Math.round(r[0] * 100)}%</text>`;
+  $('dFac').innerHTML = FACT.map(([n, v], i) => { const w = Math.min(100, v * 100 * (1 + ((i + k) % 3 - 1) * .15)); return `<div><span>${n}</span><u><i style="width:0" data-w="${(w / .4).toFixed(0)}%"></i></u><b class="tab">${Math.round(w)}%</b></div>`; }).join('');
+  requestAnimationFrame(() => requestAnimationFrame(() => $('dFac').querySelectorAll('i').forEach(i => i.style.width = Math.min(100, parseFloat(i.dataset.w)) + '%')));
+}
+$('dFil').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; const bs = [...$('dFil').querySelectorAll('button')];
+  bs.forEach(x => x.setAttribute('aria-pressed', String(x === b))); pintarDash(bs.indexOf(b)); });
+pintarDash(0);
+
 // ---------- 4. Sura escribe su consulta ----------
 // Solo se anima cuando está a la vista: así la pantalla no se mueve mientras se lee otra parte.
 let sqlVisible = false;
@@ -613,7 +724,7 @@ const cuandoSeVea = async () => { while (!sqlVisible) await espera(300); };
 })();
 
 // ---------- 5. Supabase: cupos según el número de empresas ----------
-const INF_EMP = 10000/3000, MED_INF = 35.15, KB_BD = .5, KB_COPIA = .3, MB_PDF = 2.5, MESES = 72;   // 2020 a hoy ≈ 72 meses
+const INF_EMP = 17000/3000, MED_INF = 35.15, KB_BD = .5, KB_COPIA = .3, MB_PDF = 2.5, MESES = 72;   // 2020 a hoy ≈ 72 meses
 const PLAN = {bd: 8, st: 100, eg: 250};
 function calc(emp){
   const inf = emp * INF_EMP, med = inf * MED_INF;
@@ -651,16 +762,25 @@ function descargar(nombre){
   const final = FUENTE.replace(/(<script id="estado" type="application\/json">)[\s\S]*?(<\/script>)/, (m, a, b) => a + json + b);
   const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([final], {type: 'text/html'})); a.download = nombre; document.body.appendChild(a); a.click(); a.remove();
 }
-function mostrarFijo(v){ $('editar').hidden = true; $('fijo').hidden = false; $('vTxt').textContent = pesos(v); }
-$('vIn').addEventListener('input', () => { const n = +$('vIn').value.replace(/\D/g, ''); $('vIn').value = n ? fmt(n) : ''; $('vFijar').disabled = !n; });
-$('vFijar').addEventListener('click', () => {
-  const n = +$('vIn').value.replace(/\D/g, ''); if (!n) return;
-  if (!confirm(`¿Establecer el valor en ${pesos(n)}?\n\nQuedará fijo y se descargará la versión final para enviar a Sura.`)) return;
-  const fecha = new Date().toLocaleDateString('es-CO', {day: 'numeric', month: 'long', year: 'numeric'});
-  estado.valor = n; estado.fecha = fecha;
-  descargar('Propuesta Conhintec para ARL SURA.html');
-  mostrarFijo(n); activarFirma();
-});
+function mostrarFijo(v){ $('vTxt').textContent = pesos(v); }
+// ---------- Soporte de cargue: $15.000 por orden, según la periodicidad ----------
+const TARIFA = 15000, POR_MES = 17000 / 72 * 1.0;   // órdenes nuevas al mes, estimado con la historia desde 2020
+const PER = {mes: {m: 1, t: 'Cada mes'}, tri: {m: 3, t: 'Cada trimestre'}, sem: {m: 6, t: 'Cada semestre'}, mil: {fijo: 1000, t: 'Cada 1.000 órdenes'}};
+let per = 'tri';
+function pintarCargue(desdeBarra){
+  const p = PER[per];
+  if (!desdeBarra){ $('rOrd').value = p.fijo || Math.round(POR_MES * p.m / 10) * 10; }
+  $('rOrd').disabled = !!p.fijo;
+  const n = +$('rOrd').value; $('oOrd').textContent = fmt(n);
+  $('cgVal').textContent = pesos(n * TARIFA);
+  $('cgTit').textContent = p.fijo ? 'Valor de cada cargue' : 'Valor estimado de cada cargue';
+  $('cgTxt').textContent = `${p.t}: ${fmt(n)} órdenes × ${pesos(TARIFA)}. Se paga al momento de cargar.`;
+}
+$('per').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; per = b.dataset.p;
+  $('per').querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', String(x === b))); pintarCargue(); });
+$('rOrd').addEventListener('input', () => pintarCargue(true));
+pintarCargue();
+
 // ---------- Firma de Sura ----------
 function activarFirma(){ $('bFirmar').disabled = false; $('notaFirma').textContent = 'Al firmar se descarga la propuesta aprobada para enviarla a Conhintec.'; }
 function mostrarFirma(f){ $('sinFirma').hidden = true; $('conFirma').hidden = false; $('fImg').src = f.img; $('fTxt').textContent = `${f.nombre} · ${f.cargo} · ${f.fecha}`; }
@@ -680,7 +800,7 @@ $('fForm').addEventListener('submit', e => {
   mostrarFirma(estado.firma);
   descargar('Propuesta Conhintec para ARL SURA - aprobada.html');
 });
-if (estado.valor){ mostrarFijo(estado.valor); activarFirma(); if (estado.fecha) $('fechaDoc').textContent = estado.fecha; }
+if (estado.valor){ mostrarFijo(estado.valor); activarFirma(); }
 if (estado.firma) mostrarFirma(estado.firma);
 </script>
 </body>
